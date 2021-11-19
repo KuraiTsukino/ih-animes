@@ -10,10 +10,14 @@ const path = require('path')
 
 const connectDB = require("./config/db")
 
+const bodyParser = require("body-parser")
+
 // 2. Middlewares. Es una función que se ejecuta después de recibir una petición y antes de dar una respuesta.
 // Trabajar con archivos estáticos
 
 app.use(express.static(path.join (__dirname, 'public')))
+
+app.use(bodyParser.urlencoded({extended:true}))
 
 // Configuraciones
 
@@ -31,6 +35,12 @@ connectDB()
 app.get("/", (req, res) => {
     res.render("index")
 })
+
+// Separar carpetas de rutas y controles.
+
+// Animes
+
+app.use("/animes", require('./routes/animes.router'))
 
 // 4. Servidor
 
