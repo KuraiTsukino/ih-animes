@@ -131,6 +131,6 @@ const generateAnimes = async() => {
     mongoose.connection.close()
 }
 
-// 5. Invocar
+// 5. Invocar la función
 
 generateAnimes()

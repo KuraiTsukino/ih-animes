@@ -7,11 +7,13 @@ const router= express.Router()
 
 const animeController = require("./../controllers/animes.controller")
 
-console.log(animeController)
+//console.log(animeController)
 
 // Creación de rutas
 // Obtener los animes o mostrar en pantalla
 router.get("/", animeController.getAnimes)
+
+// Para editar un anime.
 // query params
 router.put("/:id/update", animeController.putAnimes)
 

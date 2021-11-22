@@ -6,16 +6,22 @@ const getAnimes = async (req, res) => {
     res.render ("allAnimes", {animes})
 }
 
-const putAnimes = async(req, res) => {
-    // Parámetros de la url
-    const {id} = req.params
-    // Datos del formulario body-parser
-    const {img} = req.body
+// Para editar los animes. 
 
-    const animeActualizado = await Anime.findByIdAndUpdate(id, {img}, {new:true})
-    res.redirect("/animes")
+const putAnimes = async(req, res) => {
 
     // destructuración de objetos 
+
+    // Parámetros de la url
+    const {id} = req.params
+    //console.log(id) <-- cuando aplicamos el método put en postman, nos regresa en la terminal el id.
+
+    // Datos del formulario body-parser
+    const { img } = req.body
+
+    await Anime.findByIdAndUpdate(id, {img}, {new:true})
+    res.redirect("/animes")
+
 }
 
 // Exportación de getAnimes dentro de un objeto, porque se pueden meter varias funciones.

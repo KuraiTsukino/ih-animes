@@ -10,6 +10,8 @@ const path = require('path')
 
 const connectDB = require("./config/db")
 
+// Importación del body-parser
+
 const bodyParser = require("body-parser")
 
 // 2. Middlewares. Es una función que se ejecuta después de recibir una petición y antes de dar una respuesta.
@@ -44,5 +46,6 @@ app.use("/animes", require('./routes/animes.router'))
 
 // 4. Servidor
 
-app.listen(process.env.PORT, () =>
-    console.log (`Servidor activo en http://localhost:${process.env.PORT}`))
+app.listen(process.env.PORT, () => {
+    console.log (`Servidor activo en http://localhost:${process.env.PORT}`) 
+})
