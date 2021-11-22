@@ -64,7 +64,7 @@ const animes = [
     },
     {
         "name": "Tokyo Ghoul",
-        "description": "",
+        "description": "Tokyo Ghoul is set in an alternate reality where ghouls, creatures that look like normal people but can only survive by eating human flesh, live among the human population in secrecy, hiding their true nature in order to evade pursuit from the authorities.",
         "Rating": "8.01",
         "episode": 12,
         "categorie":"Action | Mystery",

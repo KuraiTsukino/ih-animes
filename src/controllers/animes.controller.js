@@ -21,7 +21,6 @@ const putAnimes = async(req, res) => {
 
     await Anime.findByIdAndUpdate(id, {img}, {new:true})
     res.redirect("/animes")
-
 }
 
 // Exportación de getAnimes dentro de un objeto, porque se pueden meter varias funciones.
